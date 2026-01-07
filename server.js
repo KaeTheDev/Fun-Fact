@@ -23,3 +23,8 @@ app.get('/', (req, res) => {
 // to serve all files from the 'public' directory.
     res.sendFile(path.join(__dirname, 'public/contact.html'));
   });
+
+  // 6. Start the server and have it listen for incoming connections
+app.listen(port, ()=> {
+    console.log(`Server is running at http://localhost:${port}`);
+});
