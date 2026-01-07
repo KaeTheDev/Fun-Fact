@@ -9,3 +9,10 @@ const app = express();
 
 // 3. Define the port the server will run on
 const port = 3000;
+
+// 4. Define a route handler for GET requests to the root URL ('/')
+app.get('/', (req, res) => {
+    // Tell Express to use the 'express.static' middleware
+// to serve all files from the 'public' directory.
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+  });
